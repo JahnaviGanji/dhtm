@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+</body>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x, text;
+
+  x = document.getElementById("numb").value;
+
+  
+  if (isNaN(x) || x < 5000000000 || x > 9999999999) {
+    text = "Input not valid";
+  } else {
+    text = "Input OK";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+function validate() {
+  var cbox = document.forms["myForm"]["gender"];
+  if (
+    cbox[0].checked == false &&
+    cbox[1].checked == false &&
+    cbox[2].checked == false
+  ) {
+    alert("Please Select Gender");
+    return false;
+  } else {
+    alert("Successfully Submited");
+    return true;
+  }
+}
+</script>
+<form onload="return validate()" name="myForm">
+  <input type="checkbox" name="subject" value="cao"> CAO
+
+  <input type="checkbox" name="subject" value="aptitude"> Aptitude
+
+  <input type="checkbox" name="subject" value="LR"> lr <br>
+
+  <input type="submit" name="submit" value="Submit" onclick="validate()">
+</form>
+
+
+</html>

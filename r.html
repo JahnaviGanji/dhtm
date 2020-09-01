@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "Visit W3Schools";
+  var patt = /w3schools/i;
+  var result = str.match(patt);
+  document.getElementById("demo").innerHTML = result;
+}
+</script>
+</body>
+</html>
